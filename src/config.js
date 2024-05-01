@@ -1,6 +1,6 @@
 const config =
 {
-    url: 'http://localhost:2032'
+    url: 'https://backendapp-9ucp.onrender.com'
 };
 
 export default config;
