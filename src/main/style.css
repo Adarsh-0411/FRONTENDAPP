@@ -1,4 +1,4 @@
-/* Resetting default list styles for ul and ol */
+/* Reset default list styles for ul and ol */
 ul,
 ol {
   margin: 0;
@@ -21,7 +21,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #007bff; /* Change background color to blue on hover */
+  background-color: #007bff;
 }
 
 nav ul {
@@ -55,7 +55,7 @@ nav li {
 }
 
 .dropdown-content a:hover {
-  background-color: #007bff; /* Change background color to blue on hover */
+  background-color: #007bff;
 }
 
 .dropdown:hover .dropdown-content {
@@ -106,7 +106,7 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background-color: #007bff; /* Change background color to blue on hover */
+  background-color: #007bff;
 }
 
 button[type='submit']:focus {
@@ -127,7 +127,7 @@ button[type='submit']:focus {
 }
 
 .logoutButton:hover {
-  background-color: #007bff; /* Change background color to blue on hover */
+  background-color: #007bff;
 }
 
 .logoutButton:focus {
@@ -208,9 +208,9 @@ button[type='submit']:focus {
 
 .sidenav {
   background-color: #333;
-  width: 200px; /* Adjust width for side navbar */
-  height: 100vh; /* Set full height of viewport */
-  overflow-y: auto; /* Enable vertical scrolling if needed */
+  width: 200px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .sidenav ul {
@@ -218,24 +218,24 @@ button[type='submit']:focus {
 }
 
 .sidenav li {
-  display: block; /* Display list items as blocks */
+  display: block;
 }
 
 .sidenav a {
-  display: block; /* Display links as blocks */
+  display: block;
   padding: 15px 20px;
   text-decoration: none;
   color: white;
 }
 
 .sidenav a:hover {
-  background-color: #007bff; /* Change background color to blue on hover */
+  background-color: #007bff;
 }
 
 /* Main content styles */
 .main-content {
-  flex: 1; /* Allow main content to take remaining space */
-  padding: 20px; /* Add some padding to the main content */
+  flex: 1;
+  padding: 20px;
 }
 
 /* Flip card styles */
@@ -243,6 +243,36 @@ button[type='submit']:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust the height as needed */
+  height: 100vh;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #32588c;
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  background-color: #007bff;
+}

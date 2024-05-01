@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './admin.css'; // Import CSS file
 import config from '../config';
-
 
 export default function AdminHome() {
   const [adminData, setAdminData] = useState("");
@@ -30,53 +28,61 @@ export default function AdminHome() {
   return (
     <div>
       {adminData && (
-        <div className="admin-home-container"> {/* Apply custom CSS class */}
-          <h3 >Welcome {adminData.username}</h3>
+        <div style={styles.container}>
+          <h3 style={styles.heading}>Welcome {adminData.username}</h3>
           {counts ? (
-            <div className="row">
-              <div className="column">
-                <div className="card">
-                  <h3>Job Seekers</h3>
-                  <p>{counts.jobseekerCount}</p>
+            <div style={styles.cardContainer}>
+              {Object.entries(counts).map(([key, value]) => (
+                <div key={key} style={styles.card}>
+                  <h3 style={styles.cardTitle}>{key}</h3>
+                  <p style={styles.cardValue}>{value}</p>
                 </div>
-              </div>
-              <div className="column">
-                <div className="card">
-                  <h3>Recruiters</h3>
-                  <p>{counts.recruiterCount}</p>
-                </div>
-              </div>
-              <div className="column">
-                <div className="card">
-                  <h3>Jobs</h3>
-                  <p>{counts.jobCount}</p>
-                </div>
-              </div>
-              <div className="column">
-                <div className="card">
-                  <h3>Job Applicants</h3>
-                  <p>{counts.jobApplicantCount}</p>
-                </div>
-              </div>
-              <div className="column">
-                <div className="card">
-                  <h3>Selected Applicants</h3>
-                  <p>{counts.selectedCount}</p>
-                </div>
-              </div>
-              <div className="column">
-                <div className="card">
-                  <h3>Rejected Applicants</h3>
-                  <p>{counts.rejectedCount}</p>
-                </div>
-              </div>
+              ))}
             </div>
           ) : (
             <p>Loading counts...</p>
           )}
-          {error && <p style={{ color: 'red' }}>{error}</p>}
+          {error && <p style={styles.error}>{error}</p>}
         </div>
       )}
     </div>
   );
 }
+
+const styles = {
+  container: {
+    padding: '20px',
+    textAlign: 'center',
+  },
+  heading: {
+    marginBottom: '20px',
+    color: '#333',
+  },
+  cardContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  card: {
+    margin: '10px',
+    padding: '20px',
+    background: '#f5f5f5',
+    borderRadius: '8px',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+    minWidth: '200px',
+    maxWidth: '250px',
+  },
+  cardTitle: {
+    marginBottom: '10px',
+    color: '#555',
+    fontSize: '18px',
+  },
+  cardValue: {
+    color: '#333',
+    fontSize: '24px',
+    fontWeight: 'bold',
+  },
+  error: {
+    color: 'red',
+  },
+};

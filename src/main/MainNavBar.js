@@ -17,11 +17,11 @@ export default function MainNavBar({ onAdminLogin, onJobSeekerLogin, onRecruiter
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/registration">Job Seeker Registration</Link></li>
+          <li><Link to="/registration"> Registration</Link></li>
           <li className="dropdown">
             <Link>Login</Link>
             <div className="dropdown-content">
-              <Link to="/jobseekerlogin">Job Seeker Login</Link>
+              <Link to="/jobseekerlogin">Student Login</Link>
               <Link to="/recruiterlogin">Recruiter Login</Link>
               <Link to="/adminlogin">Admin Login</Link>
             </div>

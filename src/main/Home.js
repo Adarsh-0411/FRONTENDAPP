@@ -34,12 +34,18 @@ const Home = () => {
 
 const styles = {
   backgroundContainer: {
-    position: 'relative',
-    backgroundImage: 'url("C:/Users/tnsad/Downloads/background-image.jpg")',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '500px', // Adjust the height as needed
+    backgroundImage: 'url(your-background-image.jpg)', // Add your background image URL here
+    backgroundColor: 'navy', // Add navy background color
+    zIndex: -1, // Ensure it's behind other content
   },
+  
   contentContainer: {
     position: 'absolute',
     top: '50px', // Adjust the top position to overlay the content as needed
@@ -83,6 +89,7 @@ const styles = {
     color: '#007bff',
     textDecoration: 'none',
   },
+
 };
 
 export default Home;

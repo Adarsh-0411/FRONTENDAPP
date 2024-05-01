@@ -9,6 +9,7 @@ import './App.css'
 export default function App() 
 {
   
+  
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
   const [isJobSeekerLoggedIn, setIsJobSeekerLoggedIn] = useState(false);
   const [isRecruiterLoggedIn, setIsRecruiterLoggedIn] = useState(false);

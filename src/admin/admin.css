@@ -238,10 +238,6 @@ button[type='submit']:focus {
   padding: 20px; /* Add some padding to the main content */
 }
 
-body {
-  background-image: url("C:\Users\tnsad\Downloads\CB8732A4-1104-4A49-90B4-C953A62945C3.png");
-  background-size: cover;
-}
 .img1 {
   display: flex;
   justify-content: center;
